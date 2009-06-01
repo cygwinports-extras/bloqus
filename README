@@ -1,0 +1,65 @@
+bloqus
+------------------------------------------
+The Bloqus program is directly inspired by the game Blokus. You can be 
+several players to play by sharing the mouse, or you can use various 
+style of automatic players (up to four, if you just want to look at a 
+game). For beginners, options allow to show the allowed (with a disc) or 
+forbidden (with a cross) squares on the grid.
+
+Runtime requirements:
+  cygwin-1.7.0-48
+  libgcc1-4.3.2-2
+  libQtCore4-4.5.1-1
+  libQtGui4-4.5.1-1
+  libstdc++6-4.3.2-2
+
+Build requirements:
+(besides corresponding -devel packages)
+  binutils-20080624-2
+  cygport-0.9.6-1
+  gcc4-core-4.3.2-2
+  gcc4-g++-4.3.2-2
+  make-3.81-2
+
+Canonical website:
+  http://bloqus.tuxfamily.org/
+
+Canonical download:
+  http://download.tuxfamily.org/bloqus/
+
+-------------------------------------------
+
+Build instructions:
+  unpack bloqus-1.0.0-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./bloqus-1.0.0-X.cygport all
+
+This will create:
+  /usr/src/bloqus-1.0.0-X-src.tar.bz2
+  /usr/src/bloqus-1.0.0-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /etc/postinstall/bloqus.sh
+  /usr/bin/bloqus.exe
+  /usr/share/applications/bloqus.desktop
+  /usr/share/doc/bloqus/Licence_CeCILL_V2-en.txt
+  /usr/share/doc/bloqus/Licence_CeCILL_V2-fr.txt
+  /usr/share/icons/hicolor/32x32/apps/bloqus.png
+  /usr/share/icons/hicolor/48x48/apps/bloqus.png
+  /usr/share/icons/hicolor/64x64/apps/bloqus.png
+
+------------------
+
+Port Notes:
+
+----- version 1.0.0-1 -----
+Initial release for Cygwin 1.7.
+
+
+Cygwin port maintained by:
+http://sourceware.org/cygwinports/

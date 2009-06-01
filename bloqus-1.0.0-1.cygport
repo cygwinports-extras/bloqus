@@ -1,0 +1,18 @@
+inherit qt4-qmake
+
+DESCRIPTION="Qt Blokus game"
+HOMEPAGE="http://bloqus.tuxfamily.org/"
+SRC_URI="http://download.tuxfamily.org/${PN}/${P}-src.tar.bz2"
+
+src_install() {
+	dobin ${B}/bloqus.exe
+
+	for i in 32 48 64
+	do
+		insinto /usr/share/icons/hicolor/${i}x${i}/apps
+		newins ${S}/images/bloqus_icon_${i}.png bloqus.png
+	done
+
+    make_desktop_entry bloqus Bloqus bloqus "Game;LogicGame;Qt"
+}
+DOCS="Licence_CeCILL_V2-*.txt"

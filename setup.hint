@@ -1,0 +1,8 @@
+category: Games
+requires: cygwin libgcc1 libQtCore4 libQtGui4 libstdc++6
+sdesc: "Qt Blokus game"
+ldesc: "The Bloqus program is directly inspired by the game Blokus. You 
+can be several players to play by sharing the mouse, or you can use 
+various style of automatic players (up to four, if you just want to look 
+at a game). For beginners, options allow to show the allowed (with a 
+disc) or forbidden (with a cross) squares on the grid."
