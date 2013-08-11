@@ -1,0 +1,27 @@
+inherit qt4-qmake
+
+NAME="bloqus"
+VERSION=1.0.0
+RELEASE=1
+CATEGORY="Games"
+SUMMARY="Qt Blokus game"
+DESCRIPTION="The Bloqus program is directly inspired by the game Blokus. You
+can be several players to play by sharing the mouse, or you can use various
+style of automatic players (up to four, if you just want to look at a game).
+For beginners, options allow to show the allowed or forbidden squares on the
+grid."
+HOMEPAGE="http://bloqus.tuxfamily.org/"
+SRC_URI="http://download.tuxfamily.org/bloqus/bloqus-${VERSION}-src.tar.bz2"
+
+src_install() {
+	dobin ${B}/bloqus.exe
+
+	for i in 32 48 64
+	do
+		insinto /usr/share/icons/hicolor/${i}x${i}/apps
+		newins ${S}/images/bloqus_icon_${i}.png bloqus.png
+	done
+
+    make_desktop_entry bloqus Bloqus bloqus "Game;LogicGame;Qt"
+}
+DOCS="Licence_CeCILL_V2-*.txt"
